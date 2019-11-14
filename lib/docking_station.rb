@@ -5,11 +5,14 @@ class DockingStation
     @bike
   end
 
-def dock(bike)
-  @bike = bike
-end
+  def dock(bike)
+    @bike = bike
+    fail 'Docking station is full' 
+  end
 
-attr_reader :bike
+
+
+  attr_reader :bike
 
 end
 
