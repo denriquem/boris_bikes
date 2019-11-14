@@ -9,10 +9,15 @@ def dock(bike)
   @bike = bike
 end
 
-#def bike       commented out due to attr_reader
-  #@bike
-#end
-
 attr_reader :bike
+
+end
+
+class Bike
+
+  bike = Bike.new
+  def working?
+
+  end
 
 end
