@@ -16,10 +16,16 @@ it {is_expected.to respond_to(:bike)}
 
 #it {expect(dock(bike)).to eq true }
 
+it "Does not release bike if there are none" do
+  expect {DockingStation.new.release_bike}.to raise_error("No bikes in rack")
+  end
+
 end
-
-
 
 describe Bike do
   it {is_expected.to respond_to(:working?)}
+
+
+
+
 end
