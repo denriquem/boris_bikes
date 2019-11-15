@@ -21,7 +21,7 @@ describe DockingStation do
   end
   
   it "Does not accept bikes for docking when rack is full" do
-    expect {DockingStation.new.dock}.to raise_error("Docking station is full")
+    expect {DockingStation.new.dock(Bike.new)}.to raise_error("Docking station is full")
   end
 
 end
